@@ -4945,12 +4945,6 @@ static void doit(void)
             users = daemons(serverport);
         }
 # endif
-#endif
-        if (users > maxusers) {
-            addreply(421, MSG_MAX_USERS, (unsigned long) maxusers);
-            doreply();
-            _EXIT(1);
-        }
     }
     /* It's time to add a new entry to the ftpwho list */
 #ifdef FTPWHO
